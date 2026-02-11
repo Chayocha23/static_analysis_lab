@@ -1,0 +1,6 @@
+{
+    "sonarlint.connectedMode.project": {
+        "connectionId": "chayocha23",
+        "projectKey": "Chayocha23_static_analysis_lab"
+    }
+}

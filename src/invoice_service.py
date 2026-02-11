@@ -89,5 +89,16 @@ class InvoiceService:
         
         if subtotal > 10000 and inv.membership not in ("gold", "platinum"):
             warnings.append("Consider membership upgrade")
-
         return total, warnings
+
+    def calculate_bonus_points(self, total: float) -> float:
+        """Calculate bonus points based on total amount."""
+        bonus_rate = 0.02  
+        
+        if total <= 1000:
+            return 0.0
+            
+        if total <= 5000:
+            return total * 0.01
+            
+        return total * bonus_rate
